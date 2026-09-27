@@ -12,7 +12,10 @@
 
   var lines = [
     { id: "mrt-kajang", name: "MRT Kajang Line", color: "#006747", stationIds: [] },
-    { id: "lrt-kelana", name: "LRT Kelana Jaya Line", color: "#0089C7", stationIds: [] }
+    { id: "mrt-putrajaya", name: "MRT Putrajaya Line", color: "#D32F2F", stationIds: [] },
+    { id: "lrt-kelana", name: "LRT Kelana Jaya Line", color: "#0089C7", stationIds: [] },
+    { id: "lrt-ampang", name: "LRT Ampang/Sri Petaling Line", color: "#E57200", stationIds: [] },
+    { id: "kl-monorail", name: "KL Monorail", color: "#00985F", stationIds: [] }
   ];
 
   var rawStations = [
@@ -64,7 +67,61 @@
     { id: "kj14", name: "Bangsar", line: "lrt-kelana", lat: 3.1280, lng: 101.6780 },
     { id: "kj15", name: "Abdullah Hukum", line: "lrt-kelana", lat: 3.1210, lng: 101.6700 },
     { id: "kj16", name: "Universiti", line: "lrt-kelana", lat: 3.1110, lng: 101.6585 },
-    { id: "kj17", name: "Kelana Jaya", line: "lrt-kelana", lat: 3.1055, lng: 101.6000 }
+    { id: "kj17", name: "Kelana Jaya", line: "lrt-kelana", lat: 3.1055, lng: 101.6000 },
+
+    // === MRT PUTRAJAYA LINE (red) — NW arc → N → central → S ===
+    { id: "py1", name: "Kwasa Damansara", line: "mrt-putrajaya", lat: 3.1792, lng: 101.5758 },
+    { id: "py2", name: "Kampung Selamat", line: "mrt-putrajaya", lat: 3.2019, lng: 101.5725 },
+    { id: "py3", name: "Sungai Buloh", line: "mrt-putrajaya", lat: 3.2120, lng: 101.5770 },
+    { id: "py4", name: "Damansara Damai", line: "mrt-putrajaya", lat: 3.1943, lng: 101.5940 },
+    { id: "py5", name: "Sri Damansara Sentral", line: "mrt-putrajaya", lat: 3.1895, lng: 101.6120 },
+    { id: "py6", name: "Kepong Baru", line: "mrt-putrajaya", lat: 3.2120, lng: 101.6410 },
+    { id: "py7", name: "Jinjang", line: "mrt-putrajaya", lat: 3.2100, lng: 101.6500 },
+    { id: "py8", name: "Sri Delima", line: "mrt-putrajaya", lat: 3.2050, lng: 101.6620 },
+    { id: "py9", name: "Kampung Batu", line: "mrt-putrajaya", lat: 3.1955, lng: 101.6745 },
+    { id: "py10", name: "Kentonmen", line: "mrt-putrajaya", lat: 3.1880, lng: 101.6800 },
+    { id: "py11", name: "Jalan Ipoh", line: "mrt-putrajaya", lat: 3.1780, lng: 101.6850 },
+    { id: "py12", name: "Sentul Barat", line: "mrt-putrajaya", lat: 3.1730, lng: 101.6940 },
+    { id: "py13", name: "Titiwangsa", line: "mrt-putrajaya", lat: 3.1714, lng: 101.7030 },
+    { id: "py14", name: "HKL", line: "mrt-putrajaya", lat: 3.1670, lng: 101.7080 },
+    { id: "py15", name: "Raja Uda", line: "mrt-putrajaya", lat: 3.1625, lng: 101.7130 },
+    { id: "py16", name: "Ampang Park", line: "mrt-putrajaya", lat: 3.1580, lng: 101.7190 },
+    { id: "py17", name: "Persiaran KLCC", line: "mrt-putrajaya", lat: 3.1570, lng: 101.7270 },
+    { id: "py18", name: "Conlay", line: "mrt-putrajaya", lat: 3.1530, lng: 101.7310 },
+    { id: "py19", name: "Tun Razak Exchange", line: "mrt-putrajaya", lat: 3.1485, lng: 101.7191 },
+    { id: "py20", name: "Chan Sow Lin", line: "mrt-putrajaya", lat: 3.1310, lng: 101.7250 },
+    { id: "py21", name: "Bandar Malaysia", line: "mrt-putrajaya", lat: 3.1110, lng: 101.7090 },
+    { id: "py22", name: "Kuchai", line: "mrt-putrajaya", lat: 3.0980, lng: 101.7060 },
+    { id: "py23", name: "Sungai Besi", line: "mrt-putrajaya", lat: 3.0820, lng: 101.7050 },
+
+    // === LRT AMPANG / SRI PETALING LINE (orange) — N → central → branch ===
+    { id: "asp1", name: "Sentul Timur", line: "lrt-ampang", lat: 3.1895, lng: 101.6960 },
+    { id: "asp2", name: "Sentul", line: "lrt-ampang", lat: 3.1820, lng: 101.6980 },
+    { id: "asp3", name: "Titiwangsa", line: "lrt-ampang", lat: 3.1714, lng: 101.7030 },
+    { id: "asp4", name: "Sultan Ismail", line: "lrt-ampang", lat: 3.1580, lng: 101.7005 },
+    { id: "asp5", name: "Bandaraya", line: "lrt-ampang", lat: 3.1530, lng: 101.6980 },
+    { id: "asp6", name: "Masjid Jamek", line: "lrt-ampang", lat: 3.1490, lng: 101.6955 },
+    { id: "asp7", name: "Plaza Rakyat", line: "lrt-ampang", lat: 3.1450, lng: 101.6985 },
+    { id: "asp8", name: "Hang Tuah", line: "lrt-ampang", lat: 3.1418, lng: 101.7040 },
+    { id: "asp9", name: "Pudu", line: "lrt-ampang", lat: 3.1380, lng: 101.7090 },
+    { id: "asp10", name: "Chan Sow Lin", line: "lrt-ampang", lat: 3.1310, lng: 101.7250 },
+    { id: "asp11", name: "Maluri", line: "lrt-ampang", lat: 3.1398, lng: 101.7345 },
+    { id: "asp12", name: "Ampang", line: "lrt-ampang", lat: 3.1480, lng: 101.7620 },
+    { id: "asp13", name: "Sri Petaling", line: "lrt-ampang", lat: 3.0547, lng: 101.6882 },
+    { id: "asp14", name: "Bukit Jalil", line: "lrt-ampang", lat: 3.0565, lng: 101.6765 },
+
+    // === KL MONORAIL (teal) — U-shaped loop in central KL ===
+    { id: "mr1", name: "KL Sentral", line: "kl-monorail", lat: 3.1340, lng: 101.6860 },
+    { id: "mr2", name: "Tun Sambanthan", line: "kl-monorail", lat: 3.1310, lng: 101.6890 },
+    { id: "mr3", name: "Maharajalela", line: "kl-monorail", lat: 3.1375, lng: 101.6965 },
+    { id: "mr4", name: "Hang Tuah", line: "kl-monorail", lat: 3.1418, lng: 101.7040 },
+    { id: "mr5", name: "Imbi", line: "kl-monorail", lat: 3.1430, lng: 101.7100 },
+    { id: "mr6", name: "Bukit Bintang", line: "kl-monorail", lat: 3.1477, lng: 101.7118 },
+    { id: "mr7", name: "Raja Chulan", line: "kl-monorail", lat: 3.1520, lng: 101.7105 },
+    { id: "mr8", name: "Bukit Nanas", line: "kl-monorail", lat: 3.1550, lng: 101.7050 },
+    { id: "mr9", name: "Medan Tuanku", line: "kl-monorail", lat: 3.1580, lng: 101.7000 },
+    { id: "mr10", name: "Chow Kit", line: "kl-monorail", lat: 3.1650, lng: 101.6990 },
+    { id: "mr11", name: "Titiwangsa", line: "kl-monorail", lat: 3.1714, lng: 101.7030 }
   ];
 
   var stations = rawStations.map(function(s) {
@@ -141,7 +198,31 @@
     { id: "pk66", name: "Universiti Malaya", description: "Malaysia's oldest university.", stationId: "kj16" },
     { id: "pk67", name: "UM Botanical Garden", description: "University botanical gardens.", stationId: "kj16" },
     { id: "pk68", name: "Kelana Jaya Market", description: "Local market and food street.", stationId: "kj17" },
-    { id: "pk69", name: "Paradigm Mall", description: "Shopping mall in Kelana Jaya.", stationId: "kj17" }
+    { id: "pk69", name: "Paradigm Mall", description: "Shopping mall in Kelana Jaya.", stationId: "kj17" },
+    { id: "pk70", name: "Pasar Kepong", description: "Traditional wet market.", stationId: "py6" },
+    { id: "pk71", name: "Metro Prima", description: "Shopping mall in Kepong.", stationId: "py6" },
+    { id: "pk72", name: "AEON AU2", description: "Shopping mall in Setiawangsa.", stationId: "py12" },
+    { id: "pk73", name: "Setiawangsa Business Park", description: "Commercial office park.", stationId: "py12" },
+    { id: "pk74", name: "Setapak Central", description: "Budget shopping complex.", stationId: "asp2" },
+    { id: "pk75", name: "Quill City Mall", description: "Shopping mall near Sultan Ismail.", stationId: "asp4" },
+    { id: "pk76", name: "Maju Junction Mall", description: "Shopping mall in Chow Kit.", stationId: "asp4" },
+    { id: "pk77", name: "Plaza Rakyat", description: "Public square and transport hub.", stationId: "asp7" },
+    { id: "pk78", name: "Pudu Sentral", description: "Major bus terminal.", stationId: "asp9" },
+    { id: "pk79", name: "Chan Sow Lin Market", description: "Local food and market area.", stationId: "asp10" },
+    { id: "pk80", name: "Ampang Point", description: "Shopping centre in Ampang.", stationId: "asp12" },
+    { id: "pk81", name: "Great Eastern Mall", description: "Upscale mall in Ampang.", stationId: "asp12" },
+    { id: "pk82", name: "Bukit Jalil National Stadium", description: "Malaysia's largest stadium.", stationId: "asp14" },
+    { id: "pk83", name: "Axiata Arena", description: "Indoor arena for sports and concerts.", stationId: "asp14" },
+    { id: "pk84", name: "Tun Sambanthan Brickfields", description: "Little India district with shops.", stationId: "mr2" },
+    { id: "pk85", name: "Merdeka Square", description: "Historic field near Maharajalela.", stationId: "mr3" },
+    { id: "pk86", name: "Stadium Merdeka", description: "Historic sports stadium.", stationId: "mr3" },
+    { id: "pk87", name: "Low Yat Plaza", description: "Top electronics mall at Imbi.", stationId: "mr5" },
+    { id: "pk88", name: "Berjaya Times Square", description: "Mega shopping and theme park.", stationId: "mr5" },
+    { id: "pk89", name: "Chow Kit Market", description: "Bustling market area.", stationId: "mr10" },
+    { id: "pk90", name: "Hospital Kuala Lumpur", description: "Major public hospital.", stationId: "mr10" },
+    { id: "pk91", name: "1 Shamelin", description: "Shopping mall in Cheras.", stationId: "py22" },
+    { id: "pk92", name: "Sungai Besi Plaza", description: "Retail and dining hub.", stationId: "py23" },
+    { id: "pk93", name: "Axiata Arena", description: "Sports and concert venue.", stationId: "py23" }
   ];
 
   var stationById = {};
