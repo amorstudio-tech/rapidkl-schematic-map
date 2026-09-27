@@ -70,4 +70,8 @@ No localhost test needed — use the deployed Vercel URL instead.
 If GitHub or Vercel setup fails, ask the trainer for fallback proof (e.g., demonstrate the app opening from a local file).
 
 ## Status
-Not started
+Completed
+
+## Result
+- GitHub: https://github.com/amorstudio-tech/rapidkl-schematic-map
+- Vercel: https://rapidkl-schematic-map.vercel.app/

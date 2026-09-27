@@ -65,8 +65,9 @@ const Map = (() => {
       }).addTo(leafletMap);
 
       // Use a regular marker with a transparent colored icon
+      var lineName = line ? line.name : "RapidKL";
       var icon = L.divIcon({
-        html: '<div style="width:44px;height:44px;border-radius:50%;background:rgba(0,120,255,0.01);cursor:pointer;" title="' + station.name + '"></div>',
+        html: '<div style="width:44px;height:44px;border-radius:50%;background:rgba(0,120,255,0.01);cursor:pointer;" title="' + station.name + '" aria-label="' + station.name + ' station, ' + lineName + ' line" role="button" tabindex="0"></div>',
         iconSize: [44, 44],
         iconAnchor: [22, 22],
         className: ''

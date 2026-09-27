@@ -2,41 +2,30 @@
 
 ## Current Phase
 
-Check
+Ship
 
 ## Current KDBM Lite Stage
 
-Check
-
-## Current Work Card
-
-`work-cards/05-review-and-fix.md`
+Ship
 
 ## Completed Work
 
+- **Setup Gate** — Workspace, Node, npm, Git, accounts confirmed.
+- **Project Brief** — Project identity, build shape (Browser-local tool), user, scope.
+- **Architecture** — Stack (HTML/CSS/JS), data model, file layout.
+- **Design** — Apple-like premium minimal inspiration, calm mood, bottom sheet + sidebar.
+- **Build Blueprint** — Comprehensive blueprint with work card plan.
 - **Work Card 01** — `data.js` + `style.css`.
 - **Work Card 02** — `map.js` with SVG schematic rendering.
-- **Work Card 03** — `poi-panel.js`.
-- **Work Card 04** — `index.html` with Leaflet + OpenStreetMap background. Geographic zoom/pan. Leaflet polylines/circles with real lat/lng.
-- **Work Card 05 (Review & Fix)** — Reviewed app against project-brief, design.md, build-blueprint, accessibility, and anti-slop rules.
+- **Work Card 03** — `poi-panel.js` with bottom sheet + sidebar.
+- **Work Card 04** — `index.html`, Leaflet + OSM background, geographic zoom/pan.
+- **Work Card 05** — Review & fix: removed debug overlay.
+- **Work Card 06** — GitHub + Vercel deployment.
 
-## Review Fix Applied
+## Deployed
 
-**Issue:** Debug overlay (green console log box) was still present in `index.html` from development. This is a usability issue — it pollutes the UI with developer output that has no purpose for end users.
-
-**Fix:** Removed the debug-log div, the `log()` function, and all event-listener logging from `index.html`. The app now starts cleanly without diagnostic UI.
-
-**Verification:**
-- `index.html` opens in browser → schematic renders with Leaflet + OSM. ✓
-- MRT Kajang line (green) and LRT Kelana Jaya line (blue) visible with correct colors. ✓
-- Tap a station → POI panel opens with station name and nearby POIs. ✓
-- Tap another station → POI content changes. ✓
-- Close via X button → panel closes, selection clears. ✓
-- Close via Escape → works. ✓
-- Click map background → deselects. ✓
-- All 45 stations have POIs assigned (69 total POIs across the network). ✓
-- No debug UI visible. ✓
-- No fake logos, testimonials, or lorem ipsum. ✓
+- **GitHub:** https://github.com/amorstudio-tech/rapidkl-schematic-map
+- **Vercel:** https://rapidkl-schematic-map.vercel.app/
 
 ## Blockers
 
@@ -44,11 +33,11 @@ None.
 
 ## Decisions Log
 
-- Current lines: MRT Kajang Line (green), LRT Kelana Jaya Line (blue). Other 3 lines removed per user preference.
-- Map rendering: Leaflet with OpenStreetMap tiles (requires internet).
-- Station interaction: Leaflet divIcon markers with click handlers.
+- Current lines: MRT Kajang Line (green), LRT Kelana Jaya Line (blue).
+- Map rendering: Leaflet with OpenStreetMap tiles.
+- Station interaction: Leaflet divIcon markers with click → POI panel.
 - POI panel: Bottom sheet (mobile), right sidebar (desktop).
 
-## Next Work Card
+## Status
 
-`work-cards/06-github-vercel-proof.md`
+v1 complete — awaiting user approval.
